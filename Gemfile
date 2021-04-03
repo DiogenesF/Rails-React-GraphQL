@@ -13,6 +13,8 @@ group :development do
   gem 'faker'
 end
 
+gem 'rack-cors'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use sqlite3 as the database for Active Record
