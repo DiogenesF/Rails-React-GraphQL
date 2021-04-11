@@ -8,13 +8,11 @@ class Mutations::CreateUser < Mutations::BaseMutation
     def resolve(name:, email:)
       user = User.new(name: name, email: email)
       if user.save
-        # Successful creation, return the created object with no errors
         {
           user: user,
           errors: [],
         }
       else
-        # Failed save, return the errors to the client
         {
           user: nil,
           errors: user.errors.full_messages
