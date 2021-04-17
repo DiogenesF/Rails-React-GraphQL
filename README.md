@@ -4,6 +4,7 @@ We have Users and Books.
 One user can have many books.
 
 When we query for all the users (app/graphql/types/query_type.rb):
+
   We return User.all
   
   The UserType has a 'books' field (app/graphql/types/user_type.rb)
