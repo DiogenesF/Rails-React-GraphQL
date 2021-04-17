@@ -5,6 +5,8 @@ ruby '3.0.0'
 
 gem 'graphql'
 
+gem 'graphql-batch'
+
 group :development do
   # A development utility to test GraphQL queries.
   gem 'graphiql-rails'

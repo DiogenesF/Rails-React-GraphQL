@@ -1,4 +1,8 @@
+require 'graphql/batch'
+
 class GraphqlApiSchema < GraphQL::Schema
+  use GraphQL::Batch
+  
   mutation(Types::MutationType)
   query(Types::QueryType)
 
