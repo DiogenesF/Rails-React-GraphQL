@@ -2,7 +2,6 @@ Trying to use Loader to solve N+1 queries
 
 We have Users and Books.
 One user can have many books.
-One book can have only one user.
 
 When we query for all the users (app/graphql/types/query_type.rb):
   We return User.all
