@@ -6,7 +6,7 @@ module Types
     field :users, [Types::UserType], null: false, description: 'Return all users'
 
     def users
-      User.all
+      Loaders::Loader.for(User).load_many(User.all.ids)
     end
 
     field :user, Types::UserType, null: false, description: 'Finds an user by a given ID and returns' do

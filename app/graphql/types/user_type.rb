@@ -9,7 +9,7 @@ module Types
     field :books, [Types::BookType], null: true
 
     def books
-      #Loaders::Loader.for(??).load(??)
+      Loaders::Loader.for(Book).load_many(object.books.ids)
     end
     field :books_count, Integer, null: true
 
