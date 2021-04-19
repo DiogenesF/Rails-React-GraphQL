@@ -14,3 +14,7 @@ One user can have many books.
   ### 4 - I didn't manage to use the loader properly to prevent this problem
   
   ### 5 - The loader is in (app/graphql/loaders/loader.rb)
+  
+  ------------------------------------------------------------------------------
+  
+  ### 6 - I managed to make it work but I don't know if it's the right way
