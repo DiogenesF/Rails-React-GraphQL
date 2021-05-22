@@ -9,7 +9,8 @@ module Types
     field :books, [Types::BookType], null: true
 
     def books
-      Loaders::Loader.for(Book).load_many(object.books.ids)
+      #object.books < this would work with the includes()
+      Loaders::Loader.for(Book).load(object.id)
     end
     field :books_count, Integer, null: true
 

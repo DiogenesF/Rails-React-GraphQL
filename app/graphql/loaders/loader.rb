@@ -5,8 +5,7 @@ class Loader < GraphQL::Batch::Loader
     end
   
     def perform(ids)
-      @model.where(id: ids).each { |record| fulfill(record.id, record) }
-      ids.each { |id| fulfill(id, nil) unless fulfilled?(id) }
+      @model.where(user_id: ids).group_by(&:user_id).each { |record| fulfill(record[0], record[1]) }
     end
   end
 end
